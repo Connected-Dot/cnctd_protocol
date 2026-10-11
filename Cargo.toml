@@ -1,0 +1,21 @@
+[package]
+name = "cnctd_protocol"
+version = "1.0.0-alpha.1"
+edition = "2021"
+authors = ["Connected Dot Inc.", "Kyle Ebner <kyle@cnctd.world>"]
+description = "Wire types shared by cnctd_server and its clients: JSON envelopes and their macros, socket messages, connection and server info"
+repository = "https://github.com/Connected-Dot/cnctd_protocol"
+license = "MIT"
+keywords = ["module"]
+
+[features]
+default = []
+# TypeScript definitions via ts-rs: `scripts/export-ts.sh [out-dir]`.
+ts = ["dep:ts-rs"]
+
+[dependencies]
+chrono = { version = "0.4", features = ["serde"] }
+http = "1"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+ts-rs = { version = "12", features = ["serde-json-impl", "chrono-impl", "no-serde-warnings"], optional = true }
