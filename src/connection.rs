@@ -58,7 +58,7 @@ pub struct UpgradeQuery {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub connection_id: Option<String>,
     /// Comma-separated channels: registers inline, for clients with no HTTP
-    /// step (ESP32 and friends).
+    /// step (embedded devices).
     #[serde(skip_serializing_if = "Option::is_none")]
     pub subscriptions: Option<String>,
     /// `json` (default) or `binary`.

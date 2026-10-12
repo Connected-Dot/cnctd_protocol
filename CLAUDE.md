@@ -1,7 +1,7 @@
 # CLAUDE.md - cnctd_protocol
 
 > Wire types shared by `cnctd_server` (the server framework) and every client
-> of it. No HTTP library here, on purpose: a client for an ESP32 or the Car
+> of it. Deliberately no HTTP library: a client for an ESP32 or the Car
 > Thing must not compile axum.
 
 ## Contents
